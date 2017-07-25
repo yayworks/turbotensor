@@ -27,3 +27,5 @@ RUN /bin/bash -x /tmp/install-openmpi.sh && rm -rf /tmp/install-openmpi.sh
 ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
+
+ADD ./NAE/help.html /etc/NAE/help.html
