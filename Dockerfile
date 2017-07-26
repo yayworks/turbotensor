@@ -41,6 +41,7 @@ RUN echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/
 ##RUN rm master.zip 
 ##RUN cd prettytensor-master 
 ##RUN /root/anaconda3/envs/tensorflow/bin/python setup.py install 
+RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install tensorflow
 RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install prettytensor 
 RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install gym
 
