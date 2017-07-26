@@ -28,7 +28,7 @@ ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
-USER nimbix
+##USER nimbix
 WORKDIR /home/nimbix
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
