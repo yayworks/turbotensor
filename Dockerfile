@@ -29,7 +29,8 @@ ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh &&  /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##&& rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 ##&& echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc \
