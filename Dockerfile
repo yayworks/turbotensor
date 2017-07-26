@@ -28,21 +28,24 @@ ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
-ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+USER nimbix
 
-RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
-RUN echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/prettytensor-0.7.2-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/enum34-1.1.6-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/setuptools-27.2.0-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/matplotlib:$PYTHONPATH' >> /root/.bashrc 
+ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
+RUN chmod +x /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+
+##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+##RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
+##RUN echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/prettytensor-0.7.2-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/enum34-1.1.6-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/setuptools-27.2.0-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/matplotlib:$PYTHONPATH' >> /root/.bashrc 
 
 ##RUN wget https://github.com/google/prettytensor/archive/master.zip -P /root 
 ##RUN unzip master.zip 
 ##RUN rm master.zip 
 ##RUN cd prettytensor-master 
 ##RUN /root/anaconda3/envs/tensorflow/bin/python setup.py install 
-RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install tensorflow
-RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install prettytensor 
-RUN sudo /root/anaconda3/envs/tensorflow/bin/pip install gym
+RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install tensorflow
+RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install keras
+RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install prettytensor 
+RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install gym
 
 ADD ./NAE/help.html /etc/NAE/help.html
