@@ -29,8 +29,8 @@ ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh \
-&&  /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh &&  /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+
 ##&& rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 ##&& echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc \
 ##&& echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/prettytensor-0.7.2-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/enum34-1.1.6-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/setuptools-27.2.0-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/matplotlib:$PYTHONPATH' >> /root/.bashrc \
