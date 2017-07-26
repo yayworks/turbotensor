@@ -1,6 +1,6 @@
 
 #!/bin/bash
-###############################################################################################i####
+####################################################################################################
 #                                                                                                  #
 # yb--sw-config.NIMBIX.x8664.turbotensor.sh - Software installs & configuration for Ubuntu TF Lab  #
 #                                                                                                  #
@@ -8,13 +8,6 @@
 #                                                                                                  #
 # Last revised 07/26/2017                                                                          #
 #                                                                                                  #
-####################################################################################################
-        display_usage() {
-                echo "Run this script as ssh_user from /home/ssh_user directory"
-                echo "Install nodejs SDK in /usr/local/node"
-                }
-#### NOTE: This file is to be used for Docker image creation
-#### After the instantiation of Docker image, yw-config....sh needs to be run for env coonfig
 ####################################################################################################
 
 
