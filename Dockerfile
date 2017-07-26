@@ -30,17 +30,17 @@ RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh \
+RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
-&& sudo rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh \
-&& sudo echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc \
-&& sudo echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/prettytensor-0.7.2-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/enum34-1.1.6-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/setuptools-27.2.0-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/matplotlib:$PYTHONPATH' >> /root/.bashrc \
+RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
+RUN echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/prettytensor-0.7.2-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/enum34-1.1.6-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/setuptools-27.2.0-py3.6.egg:/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/matplotlib:$PYTHONPATH' >> /root/.bashrc 
 
-&& wget https://github.com/google/prettytensor/archive/master.zip -P /root \
-&& sudo unzip master.zip \
-&& sudo rm master.zip \
-&& cd prettytensor-master \
-&& sudo /root/anaconda3/envs/tensorflow/bin/python setup.py install \
-&& sudo /root/anaconda3/envs/tensorflow/bin/pip install gym 
+##&& wget https://github.com/google/prettytensor/archive/master.zip -P /root \
+##&& sudo unzip master.zip \
+##&& sudo rm master.zip \
+##&& cd prettytensor-master \
+##&& sudo /root/anaconda3/envs/tensorflow/bin/python setup.py install \
+##&& sudo /root/anaconda3/envs/tensorflow/bin/pip install gym 
 
 ADD ./NAE/help.html /etc/NAE/help.html
