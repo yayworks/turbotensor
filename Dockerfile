@@ -28,4 +28,8 @@ ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
+ADD yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/sw-config.sh
+RUN chmod +x /root/sw-config.sh \
+&&  /root/sw-config.sh
+
 ADD ./NAE/help.html /etc/NAE/help.html
