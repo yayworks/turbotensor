@@ -35,7 +35,7 @@ rm com.out
 y
 EOF
 
-/root/anaconda3/bin/activate tensorflow
+source /root/anaconda3/bin/activate tensorflow
 
 /root/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
 y
