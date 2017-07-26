@@ -31,8 +31,8 @@ RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 USER nimbix
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+##RUN chmod +x /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+##RUN /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 ##RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
@@ -43,9 +43,9 @@ RUN /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 ##RUN rm master.zip 
 ##RUN cd prettytensor-master 
 ##RUN /root/anaconda3/envs/tensorflow/bin/python setup.py install 
-RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install tensorflow
-RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install keras
-RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install prettytensor 
-RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install gym
+##RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install tensorflow
+##RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install keras
+##RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install prettytensor 
+##RUN sudo /usr/local/anaconda3/envs/tensorflow/bin/pip install gym
 
 ADD ./NAE/help.html /etc/NAE/help.html
