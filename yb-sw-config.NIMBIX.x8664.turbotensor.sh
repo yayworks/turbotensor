@@ -25,8 +25,19 @@ rm com.out
 
 ###This finally did work
 
+/root/anaconda3/bin/conda create -n tensorflow python=3.6 <<EOF
+y
+EOF
+
+source /root/anaconda3/bin/activate tensorflow
+
+/root/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
+y
+EOF
 
 
 exit 0
+
+
 
 
