@@ -15,8 +15,8 @@ wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
 
 (
 sudo bash Anaconda3-4.4.0-Linux-x86_64.sh <<EOF
-/usr/local/anaconda3
 yes
+/usr/local/anaconda3
 EOF
 
 ) > com.out
