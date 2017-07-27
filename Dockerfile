@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     apt-get install -y python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-    pip3 install virtualenv
+RUN pip3 install virtualenv
 
 ENV MPI_VERSION 2.0.1
 ADD ./install-openmpi.sh /tmp/install-openmpi.sh
