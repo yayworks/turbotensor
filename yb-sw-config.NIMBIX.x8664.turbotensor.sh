@@ -15,6 +15,7 @@ wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
 
 (
 sudo bash Anaconda3-4.4.0-Linux-x86_64.sh <<EOF
+
 yes
 /usr/local/anaconda3
 EOF
@@ -23,7 +24,6 @@ EOF
 
 rm com.out
 
-export PATH=/usr/local/anaconda3/bin:$PATH
 
 ###This finally did work
 
@@ -31,7 +31,7 @@ sudo /usr/local/anaconda3/bin/conda create -n tensorflow python=3.6 <<EOF
 y
 EOF
 
-sudo source /usr/local/anaconda3/bin/activate tensorflow
+source /usr/local/anaconda3/bin/activate tensorflow
 
 sudo /usr/local/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
 y
