@@ -31,8 +31,8 @@ RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 ##USER nimbix
 ##WORKDIR /home/nimbix
 
-ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+COPY ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
+RUN chmod +x /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 ##RUN sudo /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
