@@ -33,7 +33,7 @@ WORKDIR /home/nimbix
 
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 RUN chmod +x /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN sudo /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+##RUN sudo /home/nimbix/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 ##RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
