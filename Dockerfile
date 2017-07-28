@@ -23,9 +23,13 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 RUN pip3 install virtualenv
 
-ENV MPI_VERSION 1.8.3
-ADD ./install-openmpi.sh /tmp/install-openmpi.sh
-RUN /bin/bash -x /tmp/install-openmpi.sh && rm -rf /tmp/install-openmpi.sh
+ENV MPI_VERSION 2.0.1
+##ADD ./install-openmpi.sh /tmp/install-openmpi.sh
+##RUN /bin/bash -x /tmp/install-openmpi.sh && rm -rf /tmp/install-openmpi.sh
+
+ADD ./install-ompi.sh /tmp/install-ompi.sh
+RUN /bin/bash /tmp/install-ompi.sh && \
+    rm -rf /tmp/install-ompi.sh
 
 ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
@@ -35,7 +39,7 @@ ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/yb-sw-config.NIMBIX.x8664.tu
 RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##WORKDIR /home/nimbix
-ADD ./ptf_examples.tar.gz /home/nimbix/ptf_examples.tar.gz
+##ADD ./ptf_examples.tar.gz /home/nimbix/ptf_examples.tar.gz
 ##RUN chown -R nimbix.nimbix ptf_examples
 
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
