@@ -28,7 +28,7 @@ ENV MPI_VERSION 2.0.1
 ##RUN /bin/bash -x /tmp/install-openmpi.sh && rm -rf /tmp/install-openmpi.sh
 
 ADD ./install-ompi.sh /tmp/install-ompi.sh
-RUN /bin/bash /tmp/install-ompi.sh && \
+RUN /bin/bash -x /tmp/install-ompi.sh && \
     rm -rf /tmp/install-ompi.sh
 
 ENV OSU_VERSION 5.3.2
