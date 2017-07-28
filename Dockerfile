@@ -34,10 +34,10 @@ RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
-WORKDIR /home/nimbix
-RUN wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
-RUN tar xvfpz ptf_examples.tar.gz && rm ptf_examples.tar.gz
-RUN chown -R nimbix.nimbix ptf_examples
+##WORKDIR /home/nimbix
+RUN wget -O /home/nimbix/ptf_examples.tar.gz https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
+##RUN tar xvfpz ptf_examples.tar.gz && rm ptf_examples.tar.gz
+##RUN chown -R nimbix.nimbix ptf_examples
 
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
 ###RUN tar xvfpz pnnl_tf_v2.tar.gz
