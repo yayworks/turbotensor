@@ -31,6 +31,9 @@ ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
+ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
+RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
 ###RUN tar xvfpz pnnl_tf_v2.tar.gz
 ###WORKDIR /root/cpu/py3.x
@@ -46,9 +49,7 @@ RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 ##USER nimbix
 ##WORKDIR /home/nimbix
 
-COPY ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-RUN /bin/bash -x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+
 
 ##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 ##RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
