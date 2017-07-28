@@ -31,12 +31,12 @@ ENV OSU_VERSION 5.3.2
 ADD ./install-osu.sh /tmp/install-osu.sh
 RUN /bin/bash -x /tmp/install-osu.sh && rm -rf /tmp/install-osu.sh
 
-RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
-RUN tar xvfpz pnnl_tf_v2.tar.gz
-WORKDIR /root/cpu/py3.x
+###RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
+###RUN tar xvfpz pnnl_tf_v2.tar.gz
+###WORKDIR /root/cpu/py3.x
 
-ENV PNETCDF_INSTALL_DIR parallel-netcdf-1.7.0
-ENV TF_INSTALL_DIR /root/cpu/py3.x
+###ENV PNETCDF_INSTALL_DIR parallel-netcdf-1.7.0
+###ENV TF_INSTALL_DIR /root/cpu/py3.x
 
 ##SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/setAlias.sh]
 ##SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/install_mpi_tf.sh]
