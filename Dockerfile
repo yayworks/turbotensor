@@ -38,8 +38,8 @@ WORKDIR /root/cpu/py3.x
 ENV PNETCDF_INSTALL_DIR parallel-netcdf-1.7.0
 ENV TF_INSTALL_DIR /root/cpu/py3.x
 
-RUN /bin/bash -c "source /root/cpu/py3.x/setAlias.sh"
-RUN /bin/bash -c "source /root/cpu/py3.x/install_mpi_tf.sh"
+RUN . /root/cpu/py3.x/setAlias.sh
+RUN . /root/cpu/py3.x/install_mpi_tf.sh
 
 ##USER nimbix
 ##WORKDIR /home/nimbix
