@@ -1,7 +1,7 @@
 
 #!/bin/sh
 
-cd /tmp && curl https://www.open-mpi.org/software/ompi/v1.8/downloads/openmpi-${MPI_VERSION}.tar.bz2 |tar xjf -
+cd /tmp && curl https://www.open-mpi.org/software/ompi/v2.0/downloads/openmpi-${MPI_VERSION}.tar.bz2 |tar xjf -
 
 cd /tmp/openmpi-${MPI_VERSION} && \
     ./configure --with-cuda=/usr/local/cuda --enable-mpi-thread-multiple \
