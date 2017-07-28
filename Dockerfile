@@ -35,7 +35,7 @@ ADD ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /tmp/yb-sw-config.NIMBIX.x8664.tu
 RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##WORKDIR /home/nimbix
-ADD ./ptf_examples.tar.gz /home/nimbix/
+ADD ./ptf_examples.tar.gz /home/nimbix/ptf_examples.tar.gz
 ##RUN chown -R nimbix.nimbix ptf_examples
 
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
