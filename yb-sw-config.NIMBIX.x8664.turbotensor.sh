@@ -48,6 +48,12 @@ cd /tmp/cpu/py3.x
 source /tmp/cpu/py3.x/setAlias.sh
 source /tmp/cpu/py3.x/install_mpi_tf.sh
 
+cd /home/nimbix
+wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
+tar xvfpz ptf_examples.tar.gz
+rm ptf_examples.tar.gz
+chown -R nimbix.nimbix ptf_examples
+
 
 
 exit 0
