@@ -38,17 +38,17 @@ WORKDIR /root/cpu/py3.x
 ENV PNETCDF_INSTALL_DIR parallel-netcdf-1.7.0
 ENV TF_INSTALL_DIR /root/cpu/py3.x
 
-SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/setAlias.sh]
-SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/install_mpi_tf.sh]
+##SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/setAlias.sh]
+##SHELL ["/bin/bash", "-c", "source /root/cpu/py3.x/install_mpi_tf.sh]
 ##RUN . /root/cpu/py3.x/setAlias.sh
 ##RUN . /root/cpu/py3.x/install_mpi_tf.sh
 
 ##USER nimbix
 ##WORKDIR /home/nimbix
 
-##COPY ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
-##RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
-##RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+COPY ./yb-sw-config.NIMBIX.x8664.turbotensor.sh /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh
+RUN chmod +x /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
+RUN /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 
 ##RUN rm /root/yb-sw-config.NIMBIX.x8664.turbotensor.sh 
 ##RUN echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc 
