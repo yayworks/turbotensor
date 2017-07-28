@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 RUN pip3 install virtualenv
 
-ENV MPI_VERSION 2.0.1
+ENV MPI_VERSION 1.8.3
 ADD ./install-openmpi.sh /tmp/install-openmpi.sh
 RUN /bin/bash -x /tmp/install-openmpi.sh && rm -rf /tmp/install-openmpi.sh
 
