@@ -44,7 +44,7 @@ tar xvfpz pnnl_tf_v2.tar.gz
 ###WORKDIR /root/cpu/py3.x
 
 export PNETCDF_INSTALL_DIR=parallel-netcdf-1.7.0
-export TF_INSTALL_DIR=/root/cpu/py3.x
+export TF_INSTALL_DIR=/tmp/cpu/py3.x
 
 cd /tmp/cpu/py3.x
 source /tmp/cpu/py3.x/setAlias.sh
