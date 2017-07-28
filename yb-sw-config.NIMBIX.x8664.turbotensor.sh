@@ -36,10 +36,7 @@
 #sudo /usr/local/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
 #y
 #EOFcd /home/nimbix
-wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
-tar xvfpz ptf_examples.tar.gz
-rm ptf_examples.tar.gz
-chown -R nimbix.nimbix ptf_examples
+
 
 cd /tmp
 wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
