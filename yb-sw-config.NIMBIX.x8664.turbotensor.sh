@@ -36,7 +36,14 @@
 #sudo /usr/local/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
 #y
 #EOF
-cd /root/cpu/py3.x
+wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
+tar xvfpz pnnl_tf_v2.tar.gz
+###WORKDIR /root/cpu/py3.x
+
+export PNETCDF_INSTALL_DIR=parallel-netcdf-1.7.0
+export TF_INSTALL_DIR=/root/cpu/py3.x
+
+###cd /root/cpu/py3.x
 source /root/cpu/py3.x/setAlias.sh
 source /root/cpu/py3.x/install_mpi_tf.sh
 
