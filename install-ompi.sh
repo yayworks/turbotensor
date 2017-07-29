@@ -10,5 +10,5 @@ cd /tmp/openmpi-${MPI_VERSION} && \
 cd /tmp && \
     rm -rf /tmp/openmpi-${MPI_VERSION}
 
-echo 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib' >> /etc/skel/.bashrc
-echo 'PATH=${PATH}:/usr/local/bin' >> /etc/skel/.bashrc
+##echo 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib' >> /etc/skel/.bashrc
+##echo 'PATH=${PATH}:/usr/local/bin' >> /etc/skel/.bashrc
