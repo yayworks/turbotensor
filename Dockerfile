@@ -44,8 +44,12 @@ RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz -P /home/nimbix
 
-ADD ./user_files.sh /usr/local/user_files.sh
-RUN chmod +x /usr/local/user_files.sh && chown nimbix.nimbix /usr/local/user_files.sh 
+ADD ./config.sh /usr/local/config.sh
+ADD ./start.sh /usr/local/start.sh
+ADD ./setup.x /usr/local/setup.x
+RUN chmod +x /usr/local/config.sh && chown nimbix.nimbix /usr/local/config.sh && \
+    chmod +x /usr/local/start.sh && chown nimbix.nimbix /usr/local/start.sh && \
+    chmod +x /usr/local/setup.x && chown nimbix.nimbix /usr/local/setup.x 
 
 
 ###RUN /bin/bash -x /root/user_files.sh
