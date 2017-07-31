@@ -43,10 +43,10 @@ RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 ##RUN chown -R nimbix.nimbix ptf_examples
 
 ###RUN wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz -P /home/nimbix
-ADD ./user_files.sh /root/user_files.sh
+
 ADD ./user_files.sh /usr/local/user_files.sh
-USER nimbix
-ADD ./user_files.sh /home/nimbix/user_files.sh
+RUN chmod +x /usr/local/user_files.sh && chown nimbix.nimbix /usr/local/user_files.sh 
+
 
 ###RUN /bin/bash -x /root/user_files.sh
 ##cd /home/nimbix && \
