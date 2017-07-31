@@ -11,4 +11,4 @@ export PYTHONHOME=/usr/local/py_distro
 
 numnodes=`cat /etc/JARVICE/nodes|wc -l`
 
-mpirun -np $numnodes /usr/local/setup.x
+mpirun -np $numnodes --map-by node /usr/local/setup.x
