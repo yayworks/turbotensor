@@ -1,4 +1,4 @@
 
-#!/bin/sh
+#!/bin/bash
 
-wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
+sudo wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz
