@@ -42,7 +42,7 @@ RUN /bin/bash -x /tmp/yb-sw-config.NIMBIX.x8664.turbotensor.sh
 ##ADD ./ptf_examples.tar.gz /home/nimbix/ptf_examples.tar.gz
 ##RUN chown -R nimbix.nimbix ptf_examples
 
-###ADD https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz ptf_examples.tar.gz
+RUN wget https://s3.amazonaws.com/yb-lab-cfg/ptf_examples.tar.gz -P /home/nimbix
 ADD ./user_files.sh /root/user_files.sh
 RUN /bin/bash -x /root/user_files.sh
 ##cd /home/nimbix && \
