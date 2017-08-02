@@ -39,8 +39,8 @@
 
 
 cd /tmp
-wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v2.tar.gz
-tar xvfpz pnnl_tf_v2.tar.gz
+wget https://s3.amazonaws.com/yb-lab-cfg/pnnl_tf_v21.tar.gz
+tar xvfpz pnnl_tf_v21.tar.gz
 ###WORKDIR /root/cpu/py3.x
 
 export PNETCDF_INSTALL_DIR=parallel-netcdf-1.7.0
